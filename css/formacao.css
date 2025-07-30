@@ -1,0 +1,188 @@
+#formacao {
+  background: #141414;
+  color: #fff;
+  position: relative;
+}
+
+#formacao::after {
+  content: "";
+  position: absolute;
+  background: url(/img/detalhe.svg) center center no-repeat;
+  height: 100px;
+  width: 150px;
+  bottom: -50px;
+  left: 140px;
+  z-index: 1;
+}
+.formacao-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.formacao-container .subtitulo {
+  color: #000;
+}
+
+.formacao-texto {
+  color: #a3a3a3;
+  font-size: 1.5rem;
+  max-width: 40ch;
+  margin-bottom: 50px;
+  line-height: 32px;
+  b {
+    color: #fff;
+  }
+}
+
+.lista-formacao {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.formacao-item {
+  display: grid;
+  padding: 20px;
+  background-color: #000;
+  max-width: 180px;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 50px;
+  span {
+    color: #a3a3a3;
+    font-size: 0.87rem;
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-size: 1.125rem;
+    margin-bottom: 50px;
+  }
+  h3::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background: url(/img/detalhe.svg) center no-repeat;
+    left: -5px;
+  }
+}
+
+.cursos {
+  h4 {
+    font-size: 0.87rem;
+    color: #8f8f8f;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  h4::before {
+    content: "";
+    background: url(/img/cursos.svg) center no-repeat;
+    height: 24px;
+    width: 24px;
+    display: block;
+    position: absolute;
+    left: -40px;
+    top: -3px;
+  }
+}
+
+.cursos-item {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  span {
+    color: #8f8f8f;
+    font-size: 1.125rem;
+  }
+}
+
+.idiomas {
+  margin-top: 50px;
+  h4 {
+    font-size: 0.87rem;
+    color: #8f8f8f;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  h4::before {
+    content: "";
+    background: url(/img/idiomas.svg) center no-repeat;
+    height: 24px;
+    width: 24px;
+    display: block;
+    position: absolute;
+    left: -40px;
+    top: -3px;
+  }
+}
+
+.idiomas-item {
+  margin-bottom: 15px;
+  span {
+    color: #8f8f8f;
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 820px) {
+  #formacao::after {
+    display: none;
+  }
+  .formacao-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 60px 20px;
+  }
+  .formacao-container .subtitulo {
+    max-width: 11ch;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: #fff;
+  }
+  .formacao-texto {
+    font-size: 1.1rem;
+  }
+  .idiomas h4::before {
+    display: none;
+  }
+  .cursos h4::before {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .formacao-texto {
+    font-size: 1.1rem;
+  }
+  .idiomas h4 {
+    font-size: 0.8rem;
+  }
+  .cursos h4 {
+    margin-top: 50px;
+    font-size: 0.8rem;
+  }
+
+  .formacao-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .formacao-item {
+    margin: 0;
+  }
+}
+@media (max-width: 570px) {
+  .formacao-texto {
+    font-size: 1rem;
+  }
+  .lista-formacao {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
